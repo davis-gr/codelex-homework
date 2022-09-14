@@ -7,7 +7,6 @@ public class CozaLozaWoza {
         int upperBound = 110;
 
         for (int i = lowerBound; i <= upperBound; i++) {
-            String outputString;
 
             StringBuilder cozalozawoza = new StringBuilder();
 
@@ -23,7 +22,7 @@ public class CozaLozaWoza {
                 cozalozawoza.append("Woza");
             }
 
-            outputString = cozalozawoza.toString();
+            String outputString = cozalozawoza.toString();
 
             if (!outputString.equals("")) {
                 System.out.print(outputString + " ");
