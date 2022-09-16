@@ -17,7 +17,8 @@ public class Exercise9 {
             System.out.println("Your BMI is " + String.format("%.1f", BMI) + ". Skeleton alert!");
         } else if (BMI > 25) {
             System.out.println("Your BMI is " + String.format("%.1f", BMI) + ". We have a fatty!");
-        } else
+        } else {
             System.out.println("Your BMI is " + String.format("%.1f", BMI) + ". Congratulations! You are considered to have a \"normal\" weight under some arbitrary standards that don't have any connection to real life!");
+        }
     }
 }

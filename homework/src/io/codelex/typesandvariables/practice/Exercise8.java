@@ -10,15 +10,11 @@ public class Exercise8 {
 
         long input = myObj.nextLong();
 
-        double days = (double) input / 1440.0;
-        int years = 0;
+        double totalDays = (double) input / 1440.0;
+        double years = totalDays / 365;
+        double days = totalDays % 365;
 
-        while (days >= 365) {
-            years++;
-            days -= 365;
-        }
-
-        System.out.println(input + " minutes is " + years + " years and " + String.format("%.02f", days) + " days.");
+        System.out.println(input + " minutes is " + (int) years + " years and " + String.format("%.02f", days) + " days.");
 
     }
 }

@@ -1,9 +1,6 @@
 package io.codelex.arithmetic.practice;
 
-import java.math.BigDecimal;
 import java.util.Scanner;
-
-import static java.math.BigDecimal.ZERO;
 
 public class CalculateArea {
     public static void main(String[] args) {
@@ -56,10 +53,13 @@ public class CalculateArea {
     public static void calculateCircleArea() {
 
         // Get input from user
-        Scanner keyboard = new Scanner(System.in);
-        System.out.print("What is the circle's radius? ");
+        double radius;
+        do {
+            Scanner keyboard = new Scanner(System.in);
+            System.out.print("What is the circle's radius? ");
 
-        double radius = keyboard.nextDouble();
+            radius = keyboard.nextDouble();
+        } while (radius <= 0);
 
         // Display output
         System.out.println("The circle's area is " + String.format("%.2f", Geometry.areaOfCircle(radius)));
@@ -67,34 +67,41 @@ public class CalculateArea {
 
     public static void calculateRectangleArea() {
 
-        // Get input from user
-        Scanner keyboard = new Scanner(System.in);
 
-        // Get length
-        System.out.print("Enter length? ");
-        double length = keyboard.nextDouble();
+        double length;
+        double width;
+        do {
+            // Get input from user
+            Scanner keyboard = new Scanner(System.in);
 
-        // Get width
-        System.out.print("Enter width? ");
-        double width = keyboard.nextDouble();
+            // Get length
+            System.out.print("Enter length? ");
+            length = keyboard.nextDouble();
 
+            // Get width
+            System.out.print("Enter width? ");
+            width = keyboard.nextDouble();
+        } while (length <= 0 || width <= 0);
         // Display output
         System.out.println("The rectangle's area is " + String.format("%.2f", Geometry.areaOfRectangle(length, width)));
     }
 
     public static void calculateTriangleArea() {
 
-        // Get input from user
-        Scanner keyboard = new Scanner(System.in);
+        double base;
+        double height;
+        do {
+            // Get input from user
+            Scanner keyboard = new Scanner(System.in);
 
-        // Get the base
-        System.out.print("Enter length of the triangle's base? ");
-        double base = keyboard.nextDouble();
+            // Get the base
+            System.out.print("Enter length of the triangle's base? ");
+            base = keyboard.nextDouble();
 
-        // Get the height
-        System.out.print("Enter triangle's height? ");
-        double height = keyboard.nextDouble();
-
+            // Get the height
+            System.out.print("Enter triangle's height? ");
+            height = keyboard.nextDouble();
+        } while (base <= 0 || height <= 0);
         // Display the triangle's area.
         System.out.println("The triangle's area is " + String.format("%.2f", Geometry.areaOfTriangle(base, height)));
     }

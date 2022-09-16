@@ -26,7 +26,9 @@ public class CozaLozaWoza {
 
             if (!outputString.equals("")) {
                 System.out.print(outputString + " ");
-            } else System.out.print(i + " ");
+            } else {
+                System.out.print(i + " ");
+            }
 
             if (i % 11 == 0) {
                 System.out.println();

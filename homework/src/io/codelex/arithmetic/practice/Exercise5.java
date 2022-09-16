@@ -16,6 +16,8 @@ public class Exercise5 {
             System.out.println("Sorry, you are too high.  I was thinking of " + randomNumber);
         } else if (guess < randomNumber) {
             System.out.println("Sorry, you are too low.  I was thinking of " + randomNumber);
-        } else System.out.println("You guessed it!  What are the odds?!?");
+        } else {
+            System.out.println("You guessed it!  What are the odds?!?");
+        }
     }
 }
