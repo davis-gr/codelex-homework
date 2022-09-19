@@ -38,7 +38,7 @@ public class Hangman {
             String guess = "";
             boolean goodGuess = false;
             do {
-                System.out.println("Guess: ");
+                System.out.print("Guess: ");
                 guess = input.nextLine().toLowerCase();
             }
             while (guess.length() > 1);
@@ -58,6 +58,5 @@ public class Hangman {
             }
         }
         return "You've been hanged! RIP. The word was " + String.join("", word);
-
     }
 }
