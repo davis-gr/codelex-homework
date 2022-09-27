@@ -9,10 +9,9 @@ public class TenBillion {
         Scanner in = new Scanner(System.in);
         System.out.print("Input an integer number less than ten billion: ");
 
-        long n = in.nextLong();
-
         // check if Long
-        if (n == (long) n) {
+        if (in.hasNextLong()) {
+            long n = in.nextLong();
             // check if n is less than zero
             if (n < 0) {
                 n *= -1;

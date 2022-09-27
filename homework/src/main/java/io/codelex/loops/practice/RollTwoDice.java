@@ -9,14 +9,18 @@ public class RollTwoDice {
         System.out.print("Desired input: ");
         int desiredInput = in.nextInt();
 
-        int rollDice1 = nextInt(1, 7);
-        int rollDice2 = nextInt(1, 7);
+        int rollDice1 = rollDice();
+        int rollDice2 = rollDice();;
 
         while (rollDice1 + rollDice2 != desiredInput) {
             System.out.printf("%d and %d = %d\n", rollDice1, rollDice2, rollDice1+rollDice2);
-            rollDice1 = nextInt(1, 7);
-            rollDice2 = nextInt(1, 7);
+            rollDice1 = rollDice();
+            rollDice2 = rollDice();
         }
         System.out.printf("%d and %d = %d", rollDice1, rollDice2, rollDice1+rollDice2);
+    }
+
+    private static int rollDice() {
+        return nextInt(1, 7);
     }
 }

@@ -13,7 +13,6 @@ public class FizzBuzz {
         int upperBound = in.nextInt();
 
         for (int i = lowerBound; i <= upperBound; i++) {
-            String outputString;
 
             StringBuilder fizzBuzz = new StringBuilder();
 
@@ -25,11 +24,13 @@ public class FizzBuzz {
                 fizzBuzz.append("Buzz");
             }
 
-            outputString = fizzBuzz.toString();
+            String outputString = fizzBuzz.toString();
 
             if (!outputString.equals("")) {
                 System.out.print(outputString + " ");
-            } else System.out.print(i + " ");
+            } else {
+                System.out.print(i + " ");
+            }
 
             if (i % 20 == 0) {
                 System.out.println();
