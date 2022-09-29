@@ -24,6 +24,13 @@ public class CarService {
         carList.remove(car);
     }
 
+    @Override
+    public String toString() {
+        return "CarService{" +
+                "carList=" + carList +
+                '}';
+    }
+
     public List<Car> getAmazingCars() {
         return carList.stream().filter(car -> car.getEngineType() == EngineType.V12).toList();
     }
@@ -33,30 +40,13 @@ public class CarService {
     }
 
     public Car getPriceyCar() {
-        Car expensiveCar = carList.get(0);
-        for (Car car : carList) {
-            if (car.getPrice() > expensiveCar.getPrice()) {
-                expensiveCar = car;
-            }
-        }
-        return expensiveCar;
+        carList.sort(Comparator.comparing(Car::getPrice).reversed());
+        return carList.get(0);
     }
 
     public Car getCheapCar() {
-        Car cheapCar = carList.get(0);
-        for (Car car : carList) {
-            if (car.getPrice() < cheapCar.getPrice()) {
-                cheapCar = car;
-            }
-        }
-        return cheapCar;
-    }
-
-    @Override
-    public String toString() {
-        return "CarService{" +
-                "carList=" + carList +
-                '}';
+        carList.sort(Comparator.comparing(Car::getPrice));
+        return carList.get(0);
     }
 
     public boolean checkIfCarExists(Car car) {
