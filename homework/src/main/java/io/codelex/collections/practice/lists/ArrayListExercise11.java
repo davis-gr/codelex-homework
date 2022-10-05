@@ -1,21 +1,42 @@
 package io.codelex.collections.practice.lists;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class ArrayListExercise11 {
 
     public static void main(String[] args) {
-        //TODO: Create an ArrayList with String elements
 
-        //TODO: Add 10 values to list
+        String[] words = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
 
-        //TODO: Add new value at 5th position
+        //Create an ArrayList with String elements
+        List<String> list = new ArrayList<>();
 
-        //TODO: Change value at last position (Calculate last position programmatically)
+        //Add 10 values to list
+        list.addAll(Arrays.asList(words));
 
-        //TODO: Sort your list in alphabetical order
+        //Add new value at 5th position
+        list.add(4, "four and a half");
 
-        //TODO: Check if your list contains "Foobar" element
+        // Change value at last position (Calculate last position programmatically)
+        list.set(list.size() - 1, "twenty six");
 
-        //TODO: Print each element of list using loop
+        // Sort your list in alphabetical order
+        Collections.sort(list);
+
+        //Check if your list contains "Foobar" element
+        if (list.contains("Foobar")) {
+            System.out.println("Contains Foobar!\n");
+        } else {
+            System.out.println("No Foobar :(\n");
+        }
+
+        //Print each element of list using loop
+        for (String item : list) {
+            System.out.println(item);
+        }
     }
 
 }
