@@ -45,10 +45,7 @@ public class FlightPlanner {
             route.append(" -> ").append(nextAirport);
             currentAirport = nextAirport;
         }
-
         System.out.println("Your route is: " + route);
-
-
     }
 
 
@@ -75,22 +72,17 @@ public class FlightPlanner {
         return combinations;
     }
 
-    private static void getPossibleDestinations(Map<String, List<String>> combinations, String airport) throws URISyntaxException, IOException {
+    private static void getPossibleDestinations(Map<String, List<String>> combinations, String airport) {
 
         for (String key : combinations.keySet()) {
             if (key.equals(airport)) {
-                for (String value : combinations.get(key)) {
-                    System.out.println("- " + value);
-                }
+                combinations.get(key).forEach(value -> System.out.println("- " + value));
             }
         }
-
     }
 
-    private static void printAllDepartures(Map<String, List<String>> combinations) throws URISyntaxException, IOException {
-        for (String key : combinations.keySet()) {
-            System.out.println("- " + key);
-        }
+    private static void printAllDepartures(Map<String, List<String>> combinations) {
+        combinations.keySet().forEach(key -> System.out.println("- " + key));
     }
 
 }
