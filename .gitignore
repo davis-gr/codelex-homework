@@ -25,3 +25,4 @@ hs_err_pid*
 /homework/out/*
 /homework/src/io/*
 /homework/target/*
+/homework/.idea/*
