@@ -22,6 +22,6 @@ public class Cat extends Feline {
 
     @Override
     public String toString() {
-        return "Cat[" + getAnimalName() + ", " + this.breed + ", " + getAnimalWeight() + ", " + getLivingRegion() + ", " + getFoodEaten()+ "]";
+        return "Cat[" + getAnimalName() + ", " + this.breed + ", " + getFormattedWeight() + ", " + getLivingRegion() + ", " + getFoodEaten()+ "]";
     }
 }

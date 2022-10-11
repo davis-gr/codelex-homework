@@ -23,6 +23,6 @@ public class Mouse extends Mammal {
 
     @Override
     public String toString() {
-        return "Mouse[" + getAnimalName() + ", " + getAnimalWeight() + ", " + getLivingRegion() + ", " + getFoodEaten() + "]";
+        return "Mouse[" + super.toString() + "]";
     }
 }

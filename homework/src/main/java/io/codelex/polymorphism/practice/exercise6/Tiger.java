@@ -23,6 +23,6 @@ public class Tiger extends Feline {
 
     @Override
     public String toString() {
-        return "Tiger[" + getAnimalName() + ", " + getAnimalWeight() + ", " + getLivingRegion() + ", " + getFoodEaten() + "]";
+        return "Tiger[" + super.toString() + "]";
     }
 }

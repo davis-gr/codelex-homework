@@ -23,6 +23,6 @@ public class Zebra extends Mammal {
 
     @Override
     public String toString() {
-        return "Zebra[" + getAnimalName() + ", " + getAnimalWeight() + ", " + getLivingRegion() + ", " + getFoodEaten() + "]";
+        return "Zebra[" + super.toString() + "]";
     }
 }

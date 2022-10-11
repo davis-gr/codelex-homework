@@ -13,4 +13,8 @@ public abstract class Mammal extends Animal {
         return livingRegion;
     }
 
+    @Override
+    public String toString() {
+        return getAnimalName() + ", " + getFormattedWeight() + ", " + getLivingRegion() + ", " + getFoodEaten();
+    }
 }

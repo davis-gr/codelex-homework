@@ -42,9 +42,9 @@ public class DragRace {
             }
         }
 
-        carList.sort(Comparator.comparingInt(Car::getCurrentSpeed).reversed());
+        Car fastestCar = carList.stream().max(Comparator.comparing(Car::getCurrentSpeed)).get();
 
-        System.out.println(carList.get(0).showCurrentSpeed());
+        System.out.println(fastestCar.showCurrentSpeed());
 
     }
 

@@ -1,5 +1,7 @@
 package io.codelex.polymorphism.practice.exercise6;
 
+import java.text.DecimalFormat;
+
 public abstract class Animal {
 
     private final String animalName;
@@ -26,6 +28,12 @@ public abstract class Animal {
         return animalWeight;
     }
 
+    public String getFormattedWeight() {
+        Double animalWeight = getAnimalWeight();
+        DecimalFormat df = new DecimalFormat("###.##");
+        return df.format(animalWeight);
+    }
+
     public Integer getFoodEaten() {
         return foodEaten;
     }
@@ -37,8 +45,4 @@ public abstract class Animal {
     abstract void makeSound();
     abstract void eat(Food food);
 
-    @Override
-    public String toString() {
-        return animalName + ", " + animalType + ", " + animalWeight + ", " + foodEaten;
-    }
 }

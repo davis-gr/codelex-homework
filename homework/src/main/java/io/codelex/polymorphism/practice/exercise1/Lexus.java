@@ -2,7 +2,7 @@ package io.codelex.polymorphism.practice.exercise1;
 
 import static org.apache.commons.lang3.ClassUtils.getSimpleName;
 
-public class Lexus implements Car, Boost {
+public class Lexus implements Car {
     private final Integer acceleration;
     private final Integer boost;
     private Integer currentSpeed;
