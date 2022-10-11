@@ -2,7 +2,7 @@ package io.codelex.polymorphism.practice.exercise6;
 
 public class Cat extends Feline {
 
-    private String breed;
+    private final String breed;
 
     public Cat(String animalType, String animalName, Double animalWeight, Integer foodEaten, String livingRegion, String breed) {
         super(animalType, animalName, animalWeight, foodEaten, livingRegion);

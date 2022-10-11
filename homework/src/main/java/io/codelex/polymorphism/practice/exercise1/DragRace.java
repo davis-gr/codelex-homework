@@ -1,11 +1,8 @@
 package io.codelex.polymorphism.practice.exercise1;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
-import static java.util.stream.Collectors.toList;
 
 /**
  * Take a look at the cars in this package.
@@ -44,8 +41,6 @@ public class DragRace {
                 }
             }
         }
-
-//        carList.stream().max(???).toList();
 
         carList.sort(Comparator.comparingInt(Car::getCurrentSpeed).reversed());
 

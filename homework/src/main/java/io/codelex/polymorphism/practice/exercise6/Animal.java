@@ -2,9 +2,9 @@ package io.codelex.polymorphism.practice.exercise6;
 
 public abstract class Animal {
 
-    private String animalName;
-    private String animalType;
-    private Double animalWeight;
+    private final String animalName;
+    private final String animalType;
+    private final Double animalWeight;
     private Integer foodEaten;
 
     public Animal(String animalType, String animalName, Double animalWeight, Integer foodEaten) {
@@ -18,24 +18,12 @@ public abstract class Animal {
         return animalName;
     }
 
-    public void setAnimalName(String animalName) {
-        this.animalName = animalName;
-    }
-
     public String getAnimalType() {
         return animalType;
     }
 
-    public void setAnimalType(String animalType) {
-        this.animalType = animalType;
-    }
-
     public Double getAnimalWeight() {
         return animalWeight;
-    }
-
-    public void setAnimalWeight(Double animalWeight) {
-        this.animalWeight = animalWeight;
     }
 
     public Integer getFoodEaten() {

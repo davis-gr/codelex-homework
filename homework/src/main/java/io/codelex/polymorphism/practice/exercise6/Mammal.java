@@ -2,7 +2,7 @@ package io.codelex.polymorphism.practice.exercise6;
 
 public abstract class Mammal extends Animal {
 
-    private String livingRegion;
+    private final String livingRegion;
 
     public Mammal(String animalType, String animalName, Double animalWeight, Integer foodEaten, String livingRegion) {
         super(animalType, animalName, animalWeight, foodEaten);
@@ -13,7 +13,4 @@ public abstract class Mammal extends Animal {
         return livingRegion;
     }
 
-    public void setLivingRegion(String livingRegion) {
-        this.livingRegion = livingRegion;
-    }
 }
