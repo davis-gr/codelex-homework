@@ -46,7 +46,7 @@ Explain why we obtain such an error.
     }
 
 //    We can use the following alternative signature for add: public <V> void add(V value, List<V> list) Is this solution more restricted than the one obtained using the wildcard?
-    // This solution is more restricted than the one obtained using the wildcard. Above is an example why (line 35).
+    // This solution is more restricted than the one obtained using the wildcard. Wildcard example allows to add values that ar of type T and of any type that T extends. The other example only allows to add values that are of type V.
 
 
 
