@@ -32,10 +32,9 @@ Explain why we obtain such an error.
         personList.add(person);
 
 
-        // This two lines below prove that addAllX is less restrictive than addAllY. addAllY throws an error of type incompatibility, while addAllX runs just fine for the same List concatenation exercise:
-//        addAllX(employeeList, personList);
+        // I wrote a test to prove that addAllX works, therefore it is less restrictive than addAllY. addAllY throws an error of type incompatibility, while addAllX runs just fine for the same List concatenation exercise and generates a new list of a parent class type.
+//        addAllX(employeeList, personList)
 //        addAllY(employeeList, personList);
-
 
     }
 
@@ -46,15 +45,17 @@ Explain why we obtain such an error.
     }
 
 //    We can use the following alternative signature for add: public <V> void add(V value, List<V> list) Is this solution more restricted than the one obtained using the wildcard?
-    // This solution is more restricted than the one obtained using the wildcard. Wildcard example allows to add values that ar of type T and of any type that T extends. The other example only allows to add values that are of type V.
+    // This solution is more restricted than the one obtained using the wildcard. Wildcard example allows to add values to list that are of type T and of any type that T extends. The other example only allows to add values that are of type V.
 
 
 
-    public static <V> void addAllX(List<V> v, List<? super V> l) {
+    public static <V> List<? super V> addAllX(List<V> v, List<? super V> l) {
         for(V el : v) l.add(el);
+        return l;
     }
-    public static <V> void addAllY(List<V> v, List<V> l) {
+    public static <V> List<V> addAllY(List<V> v, List<V> l) {
         for(V el : v) l.add(el);
+        return l;
     }
 
 }
