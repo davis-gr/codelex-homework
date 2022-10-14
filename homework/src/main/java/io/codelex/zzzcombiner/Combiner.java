@@ -10,9 +10,9 @@ public class Combiner<T, S> {
     private BiFunction<T, S, String> function;
 
     public Combiner(T one, S two) {
-        this.one = one;
-        this.two = two;
-        this.function = (a, b) -> a.toString() + "-" + b.toString();
+            this.one = one;
+            this.two = two;
+            this.function = (a, b) -> a.toString() + "-" + b.toString();
     }
 
     public String combine() {
