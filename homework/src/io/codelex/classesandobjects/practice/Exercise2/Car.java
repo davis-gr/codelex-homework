@@ -6,6 +6,9 @@ public class Car {
     private double endKilometers;
     private double liters;
 
+    private final int HUNGRY_BENCHMARK = 15;
+    private final int ECONOMY_BENCHMARK = 5;
+
 
     public Car(double startKilometers) {
         this.startKilometers = startKilometers;
@@ -18,11 +21,11 @@ public class Car {
     }
 
     public boolean gasHog() {
-        return calculateConsumption() > 15;
+        return calculateConsumption() > HUNGRY_BENCHMARK;
     }
 
     public boolean economyCar() {
-        return calculateConsumption() < 5;
+        return calculateConsumption() < ECONOMY_BENCHMARK;
     }
 
     public void fillUp(double mileage, double liters) {

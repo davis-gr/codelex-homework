@@ -5,7 +5,7 @@ import java.util.Scanner;
 class LitersPerKilometer {
     public static void main(String[] args) {
 
-        Car car = getCarData();
+        Car car = createCar();
 
         Scanner scan = new Scanner(System.in);
         System.out.println(("Fill up, enter mileage: "));
@@ -18,13 +18,11 @@ class LitersPerKilometer {
         System.out.println("Kilometers per liter are " + car.calculateConsumption());
     }
 
-    private static Car getCarData() {
+    private static Car createCar() {
         Scanner scan = new Scanner(System.in);
 
-        double startKilometers;
-
         System.out.print("Enter first reading: ");
-        startKilometers = scan.nextDouble();
+        double startKilometers = scan.nextDouble();
 
         return new Car(startKilometers);
     }

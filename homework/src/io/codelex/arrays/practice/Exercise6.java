@@ -11,7 +11,7 @@ public class Exercise6 {
         }
 
         int[] numArray2 = Arrays.copyOf(numArray, numArray.length);
-        numArray2[9] = -7;
+        numArray2[numArray.length-1] = -7;
 
         StringBuilder print1 = new StringBuilder("Array 1: ");
         StringBuilder print2 = new StringBuilder("Array 2: ");

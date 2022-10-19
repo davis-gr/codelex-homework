@@ -12,15 +12,15 @@ public class Main {
         getPG(movies);
     }
 
-    static Movie[] getPG(Movie[] movies) {
-        Movie[] PGMovies = new Movie[movies.length];
+    private static Movie[] getPG(Movie[] movies) {
+        Movie[] pgMovies = new Movie[movies.length];
         int movieIter = 0;
         for (Movie movie : movies) {
             if (movie.rating.equals("PG")) {
-                PGMovies[movieIter] = movie;
+                pgMovies[movieIter] = movie;
                 movieIter++;
             }
         }
-        return PGMovies;
+        return pgMovies;
     }
 }

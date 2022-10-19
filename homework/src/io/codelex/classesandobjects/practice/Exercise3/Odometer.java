@@ -1,7 +1,7 @@
 package io.codelex.classesandobjects.practice.Exercise3;
 
 public class Odometer {
-    int mileage;
+    private int mileage;
 
     public Odometer(int mileage) {
         this.mileage = mileage;

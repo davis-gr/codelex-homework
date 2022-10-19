@@ -47,7 +47,7 @@ public class Dog {
     }
 
     String fathersName() {
-        Dog father = getFather();
+        Dog father = this.father;
         if (father == null) {
             return "Unknown";
         } else {
@@ -56,7 +56,7 @@ public class Dog {
     }
 
     boolean hasSameMotherAs(Dog otherDog) {
-        return this.getMother() == otherDog.getMother();
+        return this.mother == otherDog.getMother();
     }
 
     @Override
