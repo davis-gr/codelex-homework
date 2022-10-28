@@ -16,7 +16,7 @@ public class Main {
         Movie[] pgMovies = new Movie[movies.length];
         int movieIter = 0;
         for (Movie movie : movies) {
-            if (movie.rating.equals("PG")) {
+            if (movie.getRating().equals("PG")) {
                 pgMovies[movieIter] = movie;
                 movieIter++;
             }
