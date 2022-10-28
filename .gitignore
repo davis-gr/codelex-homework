@@ -22,8 +22,13 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+<<<<<<< HEAD
 /homework/out/*
 /homework/src/io/*
 /homework/target/*
+=======
+/homework/out/
+/homework/src/io/codelex/zzzrandoms
+>>>>>>> 1f6b9f3 (Added comments by NK)
 /homework/.idea/*
 homework.iml
