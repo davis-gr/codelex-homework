@@ -6,8 +6,8 @@ public class Car {
     private double endKilometers;
     private double liters;
 
-    private final int HUNGRY_BENCHMARK = 15;
-    private final int ECONOMY_BENCHMARK = 5;
+    private static final int HUNGRY_BENCHMARK = 15;
+    private static final int ECONOMY_BENCHMARK = 5;
 
 
     public Car(double startKilometers) {
