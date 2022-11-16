@@ -35,11 +35,11 @@ public class Main {
         carservice.removeFromList(challenger);
 
         System.out.println("All cars list: " + carservice.getCarList());
-        System.out.println("V12 engined cars: " + carservice.getAmazingCars());
-        System.out.println("Cars produced before 1999: " + carservice.getOldCars());
+        System.out.println("Cars by engine type: " + carservice.getByEngineType(EngineType.V12));
+        System.out.println("Cars produced before certain year: " + carservice.getCarsByManufacturingYear(1999));
         System.out.println("Most expensive car: " + carservice.getPriceyCar());
         System.out.println("Cheapest car: " + carservice.getCheapCar());
-        System.out.println("Cars with at least three manufacturers: " + carservice.multipleManufacturers());
+        System.out.println("Cars with multiple manufacturers: " + carservice.multipleManufacturers(3));
         //I decided to implement one sorting mechanism as a proof of concept - by car's age.
         System.out.println("Sorted by age (ascending): " + carservice.sortByAge("ascending"));
         System.out.println("Sorted by age (descending): " + carservice.sortByAge("descending"));

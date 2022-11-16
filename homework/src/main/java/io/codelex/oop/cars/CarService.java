@@ -31,12 +31,12 @@ public class CarService {
                 '}';
     }
 
-    public List<Car> getAmazingCars() {
-        return carList.stream().filter(car -> car.getEngineType() == EngineType.V12).toList();
+    public List<Car> getByEngineType(EngineType type) {
+        return carList.stream().filter(car -> car.getEngineType() == type).toList();
     }
 
-    public List<Car> getOldCars() {
-        return carList.stream().filter(car -> car.getYearOfManufacturing() < 1999).toList();
+    public List<Car> getCarsByManufacturingYear(int year) {
+        return carList.stream().filter(car -> car.getYearOfManufacturing() < year).toList();
     }
 
     public Car getPriceyCar() {
@@ -69,8 +69,8 @@ public class CarService {
         return carList;
     }
 
-    public List<Car> multipleManufacturers() {
-        return carList.stream().filter(car -> (long) car.getManufacturer().size() >= 3).toList();
+    public List<Car> multipleManufacturers(int count) {
+        return carList.stream().filter(car -> (long) car.getManufacturer().size() >= count).toList();
     }
 
 
