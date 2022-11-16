@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Exercise1 {
 
-    int hours = 0;
-    final int HOURS_PER_WORKDAY = 8;
+    private static int hours = 0;
+    private static final int HOURS_PER_WORKDAY = 8;
 
     public static void main(String[] args) {
 
