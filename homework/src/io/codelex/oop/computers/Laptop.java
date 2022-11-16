@@ -4,8 +4,8 @@ public class Laptop extends Computer {
 
     private String battery;
 
-    public Laptop(String processor, String RAM, String graphicsCard, String company, String model, String battery) {
-        super(processor, RAM, graphicsCard, company, model);
+    public Laptop(String processor, String ram, String graphicsCard, String company, String model, String battery) {
+        super(processor, ram, graphicsCard, company, model);
         this.battery = battery;
     }
 
@@ -21,7 +21,7 @@ public class Laptop extends Computer {
     public String toString() {
         return "Computer{" +
                 "processor='" + getProcessor() + '\'' +
-                ", RAM='" + getRAM() + '\'' +
+                ", RAM='" + getRam() + '\'' +
                 ", graphicsCard='" + getGraphicsCard() + '\'' +
                 ", company='" + getCompany() + '\'' +
                 ", model='" + getModel() + '\'' +

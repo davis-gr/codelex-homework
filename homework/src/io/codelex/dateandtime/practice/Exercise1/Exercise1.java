@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class Exercise1 {
 
+    int hours = 0;
+    final int HOURS_PER_WORKDAY = 8;
 
     public static void main(String[] args) {
 
@@ -23,8 +25,6 @@ public class Exercise1 {
     }
 
     private static int calculateHours(LocalDate dateFrom, LocalDate dateTo) {
-        int hours = 0;
-        final int HOURS_PER_WORKDAY = 8;
         for (LocalDate date = dateFrom; date.isBefore(dateTo.plusDays((1))); date = date.plusDays(1)) {
             if (date.getDayOfWeek().getValue() < 6) {
                 hours += HOURS_PER_WORKDAY;

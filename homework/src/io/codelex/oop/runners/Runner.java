@@ -19,7 +19,7 @@ public enum Runner {
         if (time <= ADVANCED.maxTime) {
             return Runner.ADVANCED;
         }
-        if (time >= BEGINNER.minTime) {
+        else if (time >= BEGINNER.minTime) {
             return Runner.BEGINNER;
         } else {
             return Runner.INTERMEDIATE;

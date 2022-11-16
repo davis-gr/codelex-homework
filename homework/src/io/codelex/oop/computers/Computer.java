@@ -5,14 +5,14 @@ import java.util.Objects;
 public class Computer {
 
     private String processor;
-    private String RAM;
+    private String ram;
     private String graphicsCard;
     private String company;
     private String model;
 
-    public Computer(String processor, String RAM, String graphicsCard, String company, String model) {
+    public Computer(String processor, String ram, String graphicsCard, String company, String model) {
         this.processor = processor;
-        this.RAM = RAM;
+        this.ram = ram;
         this.graphicsCard = graphicsCard;
         this.company = company;
         this.model = model;
@@ -26,12 +26,12 @@ public class Computer {
         this.processor = processor;
     }
 
-    public String getRAM() {
-        return RAM;
+    public String getRam() {
+        return ram;
     }
 
-    public void setRAM(String RAM) {
-        this.RAM = RAM;
+    public void setRam(String ram) {
+        this.ram = ram;
     }
 
     public String getGraphicsCard() {
@@ -62,7 +62,7 @@ public class Computer {
     public String toString() {
         return "Computer{" +
                 "processor='" + processor + '\'' +
-                ", RAM='" + RAM + '\'' +
+                ", RAM='" + ram + '\'' +
                 ", graphicsCard='" + graphicsCard + '\'' +
                 ", company='" + company + '\'' +
                 ", model='" + model + '\'' +
@@ -73,12 +73,12 @@ public class Computer {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Computer computer)) return false;
-        return getProcessor().equals(computer.getProcessor()) && getRAM().equals(computer.getRAM()) && getGraphicsCard().equals(computer.getGraphicsCard()) && getCompany().equals(computer.getCompany()) && getModel().equals(computer.getModel());
+        return getProcessor().equals(computer.getProcessor()) && getRam().equals(computer.getRam()) && getGraphicsCard().equals(computer.getGraphicsCard()) && getCompany().equals(computer.getCompany()) && getModel().equals(computer.getModel());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getProcessor(), getRAM(), getGraphicsCard(), getCompany(), getModel());
+        return Objects.hash(getProcessor(), getRam(), getGraphicsCard(), getCompany(), getModel());
     }
 
 

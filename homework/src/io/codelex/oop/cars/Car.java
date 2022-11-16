@@ -63,7 +63,9 @@ public class Car {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Car car)) return false;
-        return Double.compare(car.getPrice(), getPrice()) == 0 && getYearOfManufacturing() == car.getYearOfManufacturing() && getName().equals(car.getName()) && getModel().equals(car.getModel()) && getManufacturer().equals(car.getManufacturer()) && getEngineType() == car.getEngineType();
+        return Double.compare(car.getPrice(), getPrice()) == 0 && getYearOfManufacturing() == car.getYearOfManufacturing()
+                && getName().equals(car.getName()) && getModel().equals(car.getModel())
+                && getManufacturer().equals(car.getManufacturer()) && getEngineType() == car.getEngineType();
     }
 
     @Override

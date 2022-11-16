@@ -21,7 +21,7 @@ public class ComputerTest {
         // test equals() on objects
         System.out.println(chromebook.equals(chromebook2));
         // test setter
-        chromebook2.setRAM("4 GB");
+        chromebook2.setRam("4 GB");
         // test equals() on objects after updating value
         System.out.println(chromebook.equals(chromebook2));
 
@@ -32,7 +32,7 @@ public class ComputerTest {
         // test Laptop getter
         System.out.println(macbook.getBattery());
         // test Computer equals() on Laptop vs Computer object variables
-        System.out.println(macbook.getRAM().equals(legion5.getRAM()));
+        System.out.println(macbook.getRam().equals(legion5.getRam()));
 
 
     }
